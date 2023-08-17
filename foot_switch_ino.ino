@@ -16,7 +16,7 @@ void loop() {
     delay(100);
   }
 
-  Keyboard.press(KEY_F9);
+  Keyboard.press(KEY_F13);
   digitalWrite(PIN_LED, HIGH);
   delay(100);
 
