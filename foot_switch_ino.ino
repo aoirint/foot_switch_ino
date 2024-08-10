@@ -1,10 +1,11 @@
-#include "Keyboard.h"
+#include "HID-Project.h"
 
 #define PIN_BUTTON 4
 #define PIN_LED 13
 
 void setup() {
-  Keyboard.begin();
+  Mouse.begin();
+
   pinMode(PIN_BUTTON, INPUT_PULLUP);
 
   pinMode(PIN_LED, OUTPUT);
@@ -16,7 +17,8 @@ void loop() {
     delay(100);
   }
 
-  Keyboard.press(KEY_F13);
+  Mouse.click(MOUSE_NEXT);
+
   digitalWrite(PIN_LED, HIGH);
   delay(100);
 
@@ -24,7 +26,6 @@ void loop() {
     delay(100);
   }
 
-  Keyboard.releaseAll();
   digitalWrite(PIN_LED, LOW);
   delay(100);
 }
