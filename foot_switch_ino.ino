@@ -17,7 +17,7 @@ void loop() {
     delay(100);
   }
 
-  Mouse.click(MOUSE_NEXT);
+  Mouse.press(MOUSE_NEXT);
 
   digitalWrite(PIN_LED, HIGH);
   delay(100);
@@ -26,6 +26,7 @@ void loop() {
     delay(100);
   }
 
+  Mouse.release(MOUSE_NEXT);
   digitalWrite(PIN_LED, LOW);
   delay(100);
 }
